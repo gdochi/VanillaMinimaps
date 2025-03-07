@@ -112,7 +112,6 @@ public class MinimapCommand extends BrigadierCommand {
 
   private static RequiredArgumentBuilder<CommandSourceStack, EntitySelector> targetsExecute(final MultiTargetCommand command) {
     return Commands.argument("targets", EntityArgument.players())
-            .requires(source -> source.hasPermission(2))
             .executes(context -> command.run(context, EntityArgument.getPlayers(context, "targets")));
   }
 
